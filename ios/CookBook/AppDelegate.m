@@ -36,6 +36,7 @@
     NSLog(@"1");
     NSLog(@"2");
     NSLog(@"3");
+    NSLog(@"4");
     [JSPatch startWithAppKey:JSPATCH_APP_KEY];
 #ifdef DEBUG
     [JSPatch setupDevelopment];
