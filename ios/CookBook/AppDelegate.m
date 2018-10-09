@@ -33,9 +33,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    NSLog(@"");
-    NSLog(@"");
-
+    NSLog(@"1");
+    NSLog(@"2");
+    NSLog(@"3");
     [JSPatch startWithAppKey:JSPATCH_APP_KEY];
 #ifdef DEBUG
     [JSPatch setupDevelopment];
