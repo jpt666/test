@@ -1,0 +1,98 @@
+//
+//  CookBook-PrefixHeader.pch
+//  CookBook
+//
+//  Created by 你好 on 16/4/13.
+//  Copyright © 2016年 coralhust. All rights reserved.
+//
+
+#ifndef CookBook_PrefixHeader_pch
+#define CookBook_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define WXAPP_ID @"wxe108065bf7d30337"
+#define WXAPP_SECRET @"da99fcc5ad4b2a6787ee874db09f2762"
+#define MyAPPID @"1104195203"
+
+#define SERVER_HOST @"http://www.yijiayinong.com/cookbook"
+#define SERVER_UPLOAD_IMAGE_URL  [NSString stringWithFormat:@"%@/api/user/updateimage", SERVER_HOST]
+#define SERVER_IMAGE_ACCESS_URL [NSString stringWithFormat:@"%@/api/user/getimage?imagemd5=", SERVER_HOST]
+//#define SERVER_UPLOAD_COOKBOOK_URL [NSString stringWithFormat:@"%@/api/user/updatecuisine", SERVER_HOST]
+//#define SERVER_UPLOAD_COOKPRODUCT_URL [NSString stringWithFormat:@"%@/api/user/updateproduct", SERVER_HOST]
+//#define SERVER_COOKBOOK_LIST_URL [NSString stringWithFormat:@"%@/api/user/getsomecuisine", SERVER_HOST]
+//#define SERVER_COOKBOOK_LIST_BYTIME_URL [NSString stringWithFormat:@"%@/api/user/getsomecuisinebytime", SERVER_HOST]
+//#define SERVER_PRODUCT_LIST_URL [NSString stringWithFormat:@"%@/api/user/getsomeproduct", SERVER_HOST]
+//#define SERVER_PRODUCT_LIST_BYTIME_URL [NSString stringWithFormat:@"%@/api/user/getsomeproductbytime", SERVER_HOST]
+#define SERVER_UPDATE_PERSONAL_INFO [NSString stringWithFormat:@"%@/api/user/update", SERVER_HOST]
+
+//#define SERVER_GETMENUBUYID_URL  [NSString stringWithFormat:@"%@/api/user/getcuisine", SERVER_HOST]
+#define SERVER_LOGIN_USER [NSString stringWithFormat:@"%@/api/user/login", SERVER_HOST]
+#define SERVER_REGISTER_USER [NSString stringWithFormat:@"%@/api/user/register", SERVER_HOST]
+//#define SERVER_GETMORE_CUISINE [NSString stringWithFormat:@"%@/api/user/getmorecuisine", SERVER_HOST]
+//#define SERVER_GETMORE_PRODUCT [NSString stringWithFormat:@"%@/api/user/getmoreproduct", SERVER_HOST]
+//#define SERVER_DELETE_CUISINE [NSString stringWithFormat:@"%@/api/user/delmycuisine", SERVER_HOST]
+//#define SERVER_DELETE_PRODUCT [NSString stringWithFormat:@"%@/api/user/delmyproduct", SERVER_HOST]
+//#define SERVER_RECOMMEND [NSString stringWithFormat:@"%@/api/user/recommend", SERVER_HOST]
+
+//#define SERVER_SHARE_COOKBOOK_URL [NSString stringWithFormat:@"http://www.yijiayinong.com/appMenu.html?"]
+//#define SERVER_SHARE_PRODUCT_URL  [NSString stringWithFormat:@"http://www.yijiayinong.com/appOpus.html?"]
+//#define UPLOADIMAGE_POST_STRING  @"imagemd5=%@&image64=%@"e
+
+//#ifdef DEBUG
+//#define API_HOST @"http://dev.yijiayinong.com"
+//#else
+#define API_HOST @"http://api.yijiayinong.com"
+//#endif
+
+
+#define API_ROOT_URL [NSString stringWithFormat:@"%@/v1/root", API_HOST]
+
+#define BULKLIST_URL [NSString stringWithFormat:@"%@/v1/business/bulks/", API_HOST]
+#define WXLOGIN_URL [NSString stringWithFormat:@"%@/v1/business/weixin", API_HOST]
+#define MOBILELOGIN_URL [NSString stringWithFormat:@"%@/v1/business/login", API_HOST]
+#define REFRESHTOKEN_URL [NSString stringWithFormat:@"%@/v1/auth/refresh", API_HOST]
+#define ORDER_URL [NSString stringWithFormat:@"%@/v1/business/orders/", API_HOST]
+#define SHIPPINGADDR_URL [NSString stringWithFormat:@"%@/v1/business/shippingaddresses/", API_HOST]
+#define BINDINGMOBILE_URL [NSString stringWithFormat:@"%@/v1/business/bind", API_HOST]
+#define IMAGES_URL [NSString stringWithFormat:@"%@/v1/business/images/", API_HOST]
+#define COOKRECIPES_URL [NSString stringWithFormat:@"%@/v1/business/recipes/", API_HOST]
+#define COOKDISHS_URL [NSString stringWithFormat:@"%@/v1/business/dishs/", API_HOST]
+#define RECIPEINDEX_URL [NSString stringWithFormat:@"%@/v1/business/recipeindex", API_HOST]
+#define BUSINESSINDEX_URL [NSString stringWithFormat:@"%@/v1/business/index", API_HOST]
+#define SMSCODE_URL [NSString stringWithFormat:@"%@/v1/business/sms/", API_HOST]
+
+#define PRODUCTCATEGORY_URL [NSString stringWithFormat:@"%@/v1/business/categorys/", API_HOST]
+#define LISTINCATEGORY_URL [NSString stringWithFormat:@"%@/v1/business/products/", API_HOST]
+#define BULKSUMMARYS_URL [NSString stringWithFormat:@"%@/v1/business/bulksummarys/", API_HOST]
+#define STORAGES_URL [NSString stringWithFormat:@"%@/v1/business/storages/", API_HOST]
+#define APPLY_RESELLER_URL [NSString stringWithFormat:@"%@/v1/business/apply", API_HOST]
+#define USERINFO_URL [NSString stringWithFormat:@"%@/v1/business/user", API_HOST]
+#define APPLY_PROTOCOL_URL @"http://www.yijiayinong.com/disclaimer.html"
+
+
+#define PLACE_HOLDER_COOK_IMAGE @"1"
+
+#define NotifyScreenTouchBegin @"NotifyScreenTouchBegin"
+#define NotifyScreenTouchMoved @"NotifyScreenTouchMoved"
+#define NotifyScreenTouchEnded @"NotifyScreenTouchEnded"
+
+#define DefaultFixScreenWidth 640
+
+#define ScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#import "RDVTabBarController.h"
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+#import "PhotoViewController.h"
+#import "AFHttpTool.h"
+#import "UIColor+ZXLazy.h"
+#import "WCAlertview.h"
+#import <WXApi.h>
+
+
+#define SIZE_FACTOR     [UIScreen mainScreen].bounds.size.width / 320.f
+#define PHOTO_LIST_SIZE CGSizeMake((ScreenWidth-4)/3 * SIZE_FACTOR, (ScreenWidth-4)/3 * SIZE_FACTOR)
+#define MAX_LIMIT_NUMS 2000
+#endif /* CookBook_PrefixHeader_pch */
